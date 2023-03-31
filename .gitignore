@@ -2,6 +2,7 @@ airflow_exercises/airflow/
 .venv/
 .DS_Store/
 .idea/
+.*pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
