@@ -14,10 +14,35 @@
 https://ru.hexlet.io/blog/posts/ispolzovanie-neskolkih-versiy-python-na-unix-podobnyh-operatsionnyh-sistemah
 
 ---
-- по степам тут https://ru.hexlet.io/projects/49/members/9745?step_id=207 and here - 
+- по степам тут 
+https://ru.hexlet.io/projects/49/members/9745?step_id=207
+
+ and here - 
 https://ru.hexlet.io/courses/python-setup-environment/lessons/start-with-poetry/theory_unit 
 
 ---
+
+# Trouble shooting:
+
+$ pyenv install 3.8.13
+$ python3 -m venv $HOME/.poetry.venv
+$ source activate $HOME/.poetry.venv
+$ pip install poetry
+$ ln -s $HOME/.poetry.venv/bin/poetry $HOME/.local/bin
+$ export PATH="$HOME/.local/bin:$PATH"
+$ poetry config virtualenvs.in-project true
+
+vim .profile and write to it:
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+
+---
+
 
 ==== First installation and initialization ====
 

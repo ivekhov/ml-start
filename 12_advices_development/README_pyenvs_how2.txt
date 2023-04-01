@@ -82,3 +82,11 @@ pipenv install PACKAGENAME
 
 install package inside environment
 $ pip install -e .
+
+
+----
+
+$ pyenv local 3.8.12 
+
+
+installed poetry
