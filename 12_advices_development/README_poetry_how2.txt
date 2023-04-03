@@ -1,13 +1,37 @@
 
-##############################################################################################################
---------------
---------------
-1 ЧАСТЬ
---------------
---------------
+==== PROJECT initialization ====
 
-По шагам с поетри создание проектов:
 
+-- inside EMPTY parent folder:
+
+1: $ poetry new NAME		# creating a project
+2: $ ? -- optional  cd .NAMDE/ and edit pyprojects.toml in  [tool.poetry.dependencies] "python = "^3.8""
+
+
+ENV USE or INIT:
+3.1$ optional if py 38 needed: 
+$ poetry env use ~/.pyenv/versions/3.8.13/bin/python
+
+if not 3.1:
+3.2 $ poetry init
+
+
+checking: 
+$ poetry run python
+$ poetry config --list
+
+
+4: add package:
+$ poetry add PACK-NAME --group -dev 
+
+5: install it 
+$ poetry install
+
+==== END of PROJECT  initialization ====
+
+
+
+===== POETRY INSTALLATION on Mac ===============================================================
 
 0
 поставить поетри под 3 версию пайтоне - см подробно
@@ -26,12 +50,13 @@ https://ru.hexlet.io/courses/python-setup-environment/lessons/start-with-poetry/
 
 $ pyenv install 3.8.13
 $ python3 -m venv $HOME/.poetry.venv
-$ source activate $HOME/.poetry.venv
+$ source  $HOME/.poetry.venv/bin/activate
 $ pip install poetry
 $ ln -s $HOME/.poetry.venv/bin/poetry $HOME/.local/bin
 $ export PATH="$HOME/.local/bin:$PATH"
 $ poetry config virtualenvs.in-project true
 
+$
 vim .profile and write to it:
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -39,22 +64,17 @@ if [ -n "$BASH_VERSION" ]; then
         . "$HOME/.bashrc"
     fi
 fi
+#
+
+====================================================================
 
 
----
+
+==== OLD info ====
 
 
-==== First installation and initialization ====
-
-#0 Create directory with name of project 
-"mkdir PROJECT_NAME"
-
-#1 inside directory call 	
+#1 inside EMPTY directory call 	
 "poetry new PROJECT_NAME"
-
-
-
-#2 call "poetry init"
 
 
 //
@@ -72,8 +92,10 @@ poetry env use .venv/bin/python
 3) Проверить
 poetry run python
 
-
 //
+
+#2 call "poetry init"
+
 
 
 #3 установка пакетов в проект: 
@@ -249,6 +271,9 @@ poetry env use /full/path/to/python
 потом такой же командой вернуть нужную
 
 ---
+
+
+
 
 
 
