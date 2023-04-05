@@ -5,7 +5,8 @@ airflow_exercises/
 .idea/
 *.pdf
 02_01_ml_intro/data
-
+02_02_metrics_quality/data
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
