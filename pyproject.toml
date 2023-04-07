@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ml_karpov"
+name = "ml-start"
 version = "0.1.0"
 description = ""
 authors = ["ivekhov <ivekhov@gmail.com>"]
@@ -17,6 +17,10 @@ uvicorn = "^0.21.1"
 psycopg2-binary = "^2.9.5"
 scikit-learn = "^1.2.2"
 
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+statsmodels = "^0.13.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

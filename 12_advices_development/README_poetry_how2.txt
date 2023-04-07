@@ -26,8 +26,29 @@ $ poetry add PACK-NAME --group -dev
 
 5: install it 
 $ poetry install
-
+ll
 ==== END of PROJECT  initialization ====
+
+
+== if cloning from git ============================
+
+# inside parent folder, no other files in pwd folder
+$ git clone ---/---.git
+
+# in cloned git pyproject.toml -- if needed specific version if python for poetry. it creates automaticall venv
+$ poetry env use ~/.pyenv/versions/3.8.13/bin/python
+
+# localize poetry for python needed (it calls: $ poetry env use .venv/bin/python)
+$ make local poetry
+
+
+
+# install packages
+$ poetry install
+
+===============================================================
+
+
 
 
 
@@ -271,6 +292,7 @@ poetry env use /full/path/to/python
 потом такой же командой вернуть нужную
 
 ---
+
 
 
 
